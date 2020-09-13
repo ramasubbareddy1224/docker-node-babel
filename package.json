@@ -1,0 +1,23 @@
+{
+  "name": "docker-babel-debug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "dev": "nodemon -L --inspect=0.0.0.0 --exec babel-node src/",
+    "build": "babel src -s inline -d dist",
+    "start": "npm run build && node dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.8.4",
+    "@babel/core": "~7.9.0",
+    "@babel/node": "~7.8.7",
+    "@babel/preset-env": "~7.9.0",
+    "nodemon": "~2.0.2"
+  }
+}
